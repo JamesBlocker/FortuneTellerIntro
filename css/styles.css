@@ -1,15 +1,3 @@
-#questionOneResponse {
-  display: none;
-}
-
-#questionTwoResponse {
-  display: none;
-}
-
-#questionThreeResponse {
-  display: none;
-}
-
-#questionFourResponse {
+#lucky, #unlucky, #normal {
   display: none;
 }

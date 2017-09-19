@@ -1,30 +1,41 @@
+var luckTotal = 0;
+
 $(document).ready(function(){
-$("form#anxiety-quiz").submit(function(event){
-  event.preventDefault();
-  $("#questionOneResponse").show();
-  $("input:checkbox[name=social-question]:checked").each(function(){
-    var q1Answer = $(this).val();
-    $("#questionOneResponse").append(q1Answer + "<br>");
+  $("form#fortune-teller").one('submit', function(event){
+    event.preventDefault();
+    $("#questionOneResponse").show();
+    $("form#fortune-teller").hide();
+
+    $("input:checkbox[name=questionOne]:checked").each(function(){
+      var answerOne = parseInt($(this).val());
+      luckTotal = luckTotal + answerOne;
+      $("#questionOneResponse").append(answerOne + "<br>");
     });
 
-  $("#questionTwoResponse").show();
-  $("input:checkbox[name=deadline-question]:checked").each(function(){
-    var q2Answer = $(this).val();
-    $("#questionTwoResponse").append(q2Answer + "<br>");
+    $("input:checkbox[name=questionTwo]:checked").each(function(){
+      var answerTwo = parseInt($(this).val());
+      luckTotal = luckTotal + answerTwo;
+      $("#questionTwoResponse").append(answerTwo + "<br>");
+    });
+
+    $("input:radio[name=questionThree]:checked").each(function(){
+      var answerThree = parseInt($(this).val());
+      luckTotal = luckTotal + answerThree;
+      $("#questionThreeResponse").append(answerThree + "<br>");
+    });
+
+    if (luckTotal >= 7) {
+      $("#lucky").show();
+    } else if (luckTotal > 0 || luckTotal < 7) {
+      $("#normal").show();
+    } else if (luckTotal <= 0) {
+      $("#unlucky").show();
+    } else {
+      alert("You sucessfully broke the code and beat the game.")
+    }
+    //7+ very lucky
+    //1-6 lucky
+    //-1+ unlucky
   });
 
-  $("#questionThreeResponse").show();
-  $("input:checkbox[name=bed-question]:checked").each(function(){
-    var q3Answer = $(this).val();
-    $("#questionThreeResponse").append(q3Answer + "<br>");
-  });
-
-  $("#questionFourResponse").show();
-  $("input:checkbox[name=pair-question]:checked").each(function(){
-    var q4Answer = $(this).val();
-    $("#questionFourResponse").append(q4Answer + "<br>");
-  });
-
-    $("#transportation_survey").hide();
-  });
 });

@@ -6,64 +6,52 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script src="js/scripts.js"></script>
     <meta charset="utf-8">
-    <title>Personality</title>
+    <title>Fortune Teller</title>
   </head>
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h2>Anxiety Quiz</h2>
+        <h2>Fortune Teller</h2>
       </div>
-      <form id="anxiety-quiz">
+      <form id="fortune-teller">
 
         <div class="form-group">
-          <p>Question 1: Which of these do you experience in social situations? (Check all that apply)</p>
-          <input type="checkbox" name="social-question" value="1">Extreme sweating<br>
-          <input type="checkbox" name="social-question" value="2">Anxiety<br>
-          <input type="checkbox" name="social-question" value="3">Confidence<br>
-          <input type="checkbox" name="social-question" value="4">Laughing hysterically<br>
+          <p>Question 1: Have you seen any of these lucky things in the past week? (Check all that apply)</p>
+          <input type="checkbox" name="questionOne" value="1">Rubbed a Buddha's Belly<br>
+          <input type="checkbox" name="questionOne" value="2">Saw a rainbow<br>
+          <input type="checkbox" name="questionOne" value="3">Found a heads up penny<br>
+          <input type="checkbox" name="questionOne" value="4">Saw a four-leaf clover<br>
         </div>
 
         <div class="form-group">
-          <p>Question 2: Which of these do you experience when working under a deadline? (Check all that apply)</p>
-          <input type="checkbox" name="deadline-question" value="1">Frustration<br>
-          <input type="checkbox" name="deadline-question" value="2">Procrastinating<br>
-          <input type="checkbox" name="deadline-question" value="3">I enjoy working under strict deadlines<br>
-          <input type="checkbox" name="deadline-question" value="4">Doesn't effect my workflow<br>
+          <p>Question 2: Have you seen any of these unlucky things in the past week? (Check all that apply)</p>
+          <input type="checkbox" name="questionTwo" value="-1">Saw a black cat<br>
+          <input type="checkbox" name="questionTwo" value="-2">Broke a mirror<br>
+          <input type="checkbox" name="questionTwo" value="-3">Walked under a ladder<br>
+          <input type="checkbox" name="questionTwo" value="-4">Push an elderly widow to the ground<br>
         </div>
 
         <div class="form-group">
-          <p>Question 3: Which of these do you experience when you go to bed? (Check all that apply)</p>
-          <input type="checkbox" name="bed-question" value="1">Sleeplessness<br>
-          <input type="checkbox" name="bed-question" value="2">I dream in code<br>
-          <input type="checkbox" name="bed-question" value="3">Tossing and turning<br>
-          <input type="checkbox" name="bed-question" value="4">Sleep like a baby<br>
-        </div>
-
-        <div class="form-group">
-          <p>Question 4: Which of these do you experience when working in a pair? (Check all that apply)</p>
-          <input type="checkbox" name="pair-question" value="1">Glee<br>
-          <input type="checkbox" name="pair-question" value="2">Perpetual anger<br>
-          <input type="checkbox" name="pair-question" value="3">Intrepidation<br>
-          <input type="checkbox" name="pair-question" value="4">A great time!<br>
+          <p>Question 3: On average, how lucky do you feel you are?</p>
+          <input type="radio" name="questionThree" value="-2">Unluckiest person alive<br>
+          <input type="radio" name="questionThree" value="-1">not very lucky<br>
+          <input type="radio" name="questionThree" value="1">pretty lucky. Sometimes.<br>
+          <input type="radio" name="questionThree" value="2">Let's go buy a lottery ticket!<br>
         </div>
 
        <button type="submit">Submit Survey</button>
       </form>
 
-      <span id="questionOneResponse">
-        <p><b>In social situations you:</b></p>
+      <span id="lucky">
+        <p><b>LUCKY</b></p>
       </span>
 
-      <span id="questionTwoResponse">
-        <p><b>When working under deadlines you:</b></p>
+      <span id="unlucky">
+        <p><b>NOT LUCKY</b></p>
       </span>
 
-      <span id="questionThreeResponse">
-        <p><b>When going to bed, you:</b></p>
-      </span>
-
-      <span id="questionFourResponse">
-        <p><b>When working in pairs, you::</b></p>
+      <span id="normal">
+        <p><b>INDIFFERENT</b></p>
       </span>
 
     </div>
